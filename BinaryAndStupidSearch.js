@@ -49,16 +49,17 @@ function identifyTheFastest(minNumber, maxNumber, lookingNumber) {
 
     let dateC = Date.now();
     arr.sort(compareNumeric);
-    console.log('The array sorting time was ' + (Date.now() - dateC) + ' milliseconds')
+    let dateJ = Date.now();
+    console.log('The array sorting time was ' + (dateJ - dateC) + ' milliseconds')
     console.log('binary search value = ' + binarySearch(arr, lookingNumber));
     let dateD = Date.now();
 
     console.log(
-        (dateB - dateA) > (dateD - dateC)
+        (dateB - dateA) > (dateD - dateJ)
         ?
-        'binary faster (' + (dateB - dateA) + ' ms > ' + (dateD - dateC) + ' ms)'
+        'binary faster (' + (dateB - dateA) + ' ms > ' + (dateD - dateJ) + ' ms)'
         :
-        'stupid faster (' + (dateB - dateA) + ' ms < ' + (dateD - dateC) + ' ms)');
+        'stupid faster (' + (dateB - dateA) + ' ms < ' + (dateD - dateJ) + ' ms)');
 
     console.log('___');
     let dateE = Date.now();
